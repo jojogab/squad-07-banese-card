@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banese Card Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <img src="/api/placeholder/120/40" alt="Banese Card" class="mb-6">
+                <nav>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Visão Geral</a></li>
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Mensagens<span class="ml-auto bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">2</span></a></li>
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>Comunidade</a></li>
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>Pagamentos</a></li>
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>Add Campanhas</a></li>
+                        <li><a href="#" class="flex items-center text-gray-600 hover:text-green-700"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>Campanhas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-1 p-10">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex justify-between mb-4">
+                    <h2 class="text-2xl font-semibold text-gray-800">Criar Campanha</h2>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="Pesquisar Campanha" class="border rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-r hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-green-700 rounded-lg p-6">
+                        <input type="text" placeholder="Nome da campanha" class="w-full mb-4 px-3 py-2 rounded">
+                        <div class="flex mb-4 space-x-4">
+                            <select class="flex-1 px-3 py-2 rounded">
+                                <option>Tipo de premiação</option>
+                            </select>
+                            <select class="flex-1 px-3 py-2 rounded">
+                                <option>Categoria</option>
+                            </select>
+                        </div>
+                        <div class="flex mb-4 space-x-4">
+                            <input type="date" placeholder="Data de início" class="flex-1 px-3 py-2 rounded">
+                            <input type="date" placeholder="Data de término" class="flex-1 px-3 py-2 rounded">
+                        </div>
+                        <div class="flex mb-4 space-x-4">
+                            <input type="text" placeholder="Limite quantitativo" class="flex-1 px-3 py-2 rounded">
+                            <select class="flex-1 px-3 py-2 rounded">
+                                <option>Mecânica</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Iforme de excessão" class="w-full px-3 py-2 rounded">
+                    </div>
+                    <div class="bg-green-300 rounded-lg p-6">
+                        <input type="text" placeholder="Valor Mínimo" class="w-full mb-4 px-3 py-2 rounded">
+                        <input type="text" placeholder="Modo de entrada:" class="w-full mb-4 px-3 py-2 rounded">
+                        <input type="text" placeholder="MCC" class="w-full mb-4 px-3 py-2 rounded">
+                        <input type="text" placeholder="Cartões" class="w-full mb-4 px-3 py-2 rounded">
+                        <input type="text" placeholder="Estabelecimento:" class="w-full mb-4 px-3 py-2 rounded">
+                    </div>
+                </div>
+                <button class="mt-6 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">CRIAR CAMPANHA</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
