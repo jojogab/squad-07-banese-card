@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de senha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-800 flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-md">
+        <div class="bg-emerald-800 p-8 rounded-lg shadow-lg relative">
+            <h1 class="text-lime-300 text-3xl font-bold mb-6 text-center">Recuperação de senha</h1>
+            <p class="text-lime-200 mb-6 text-center">Informe o código que enviamos para o E-mail disponibilizado!</p>
+            
+            <div class="mb-6">
+                <input type="text" class="w-full bg-white rounded-full py-3 px-4 text-center text-2xl tracking-widest" placeholder="- - - - - -" maxlength="6">
+            </div>
+            
+            <button onclick="location.href = '../login.html';" class="w-full bg-lime-400 hover:bg-lime-500 text-emerald-800 font-bold py-3 px-4 rounded-full transition duration-300">
+                CONTINUAR
+            </button>
+        </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 w-32 h-32 bg-lime-400 opacity-50 transform rotate-45 -translate-x-16 translate-y-16"></div>
+    <div class="absolute bottom-0 left-0 w-24 h-24 bg-lime-300 opacity-50 transform rotate-45 -translate-x-12 translate-y-12"></div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-lime-400 opacity-50 transform -rotate-45 translate-x-16 -translate-y-16"></div>
+    <div class="absolute top-0 right-0 w-24 h-24 bg-lime-300 opacity-50 transform -rotate-45 translate-x-12 -translate-y-12"></div>
+</body>
+</html>
