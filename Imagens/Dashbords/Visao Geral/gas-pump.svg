@@ -1,0 +1,8 @@
+<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="GasPump">
+<path id="Vector" d="M7 27.8438V7.21875C7 6.67174 7.21071 6.14714 7.58579 5.76034C7.96086 5.37355 8.46957 5.15625 9 5.15625H19C19.5304 5.15625 20.0391 5.37355 20.4142 5.76034C20.7893 6.14714 21 6.67174 21 7.21875V27.8438" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M4 27.8438H24" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M21 14.4375H24C24.5304 14.4375 25.0391 14.6548 25.4142 15.0416C25.7893 15.4284 26 15.953 26 16.5V21.6562C26 22.2033 26.2107 22.7279 26.5858 23.1147C26.9609 23.5015 27.4696 23.7188 28 23.7188C28.5304 23.7188 29.0391 23.5015 29.4142 23.1147C29.7893 22.7279 30 22.2033 30 21.6562V11.1633C29.9977 10.6169 29.7866 10.0935 29.4125 9.70664L27 7.21875" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M17 14.4375H11" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

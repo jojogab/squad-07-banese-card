@@ -1,0 +1,11 @@
+<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Taxi">
+<path id="Vector" d="M2 15.4688H30" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M28 23.7188V26.8125C28 27.086 27.8946 27.3483 27.7071 27.5417C27.5196 27.7351 27.2652 27.8438 27 27.8438H24C23.7348 27.8438 23.4804 27.7351 23.2929 27.5417C23.1054 27.3483 23 27.086 23 26.8125V23.7188" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M9 23.7188V26.8125C9 27.086 8.89464 27.3483 8.70711 27.5417C8.51957 27.7351 8.26522 27.8438 8 27.8438H5C4.73478 27.8438 4.48043 27.7351 4.29289 27.5417C4.10536 27.3483 4 27.086 4 26.8125V23.7188" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M8 19.5938H10" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M22 19.5938H24" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M28 15.4688L24.2875 8.76563C24.201 8.60851 24.0755 8.47795 23.924 8.38734C23.7724 8.29672 23.6002 8.24933 23.425 8.25001H8.575C8.39981 8.24933 8.22759 8.29672 8.07602 8.38734C7.92445 8.47795 7.79899 8.60851 7.7125 8.76563L4 15.4688V23.7188H28V15.4688Z" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M20 8.25002L18.25 3.7383C18.1769 3.54718 18.0494 3.38334 17.8843 3.26831C17.7192 3.15328 17.5242 3.09243 17.325 3.09377H14.675C14.4758 3.09243 14.2808 3.15328 14.1157 3.26831C13.9506 3.38334 13.8231 3.54718 13.75 3.7383L12 8.25002" stroke="#173F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
