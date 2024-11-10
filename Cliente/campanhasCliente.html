@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanhas para Cliente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar (copiada do dashboardCliente.html) -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-4">
+                <img src="../Imagens/Dashbords/Visao Geral/logo-2.png" alt="Banese Card" class="mb-6">
+                <nav>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-green-700">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>Visão Geral
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-green-700">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>Mensagens
+                                <span class="ml-auto bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-green-700">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>Comunidade
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="location.href='dashbordPagamento.html';" class="flex items-center text-gray-600 hover:text-green-700">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                </svg>Pagamentos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-green-700">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                </svg>Campanhas
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-10">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Campanhas Disponíveis</h2>
+                <table class="w-full text-left bg-white rounded-lg shadow-lg">
+                    <thead>
+                        <tr class="bg-green-500 text-white">
+                            <th class="py-2 px-4">Nome da Campanha</th>
+                            <th class="py-2 px-4">Tipo de Premiação</th>
+                            <th class="py-2 px-4">Categoria</th>
+                            <th class="py-2 px-4">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="campanhasDisponiveisTable" class="text-gray-700">
+                        <!-- Campanhas disponíveis serão inseridas aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Minhas Inscrições</h2>
+                <table class="w-full text-left bg-white rounded-lg shadow-lg">
+                    <thead>
+                        <tr class="bg-green-500 text-white">
+                            <th class="py-2 px-4">Nome da Campanha</th>
+                            <th class="py-2 px-4">Tipo de Premiação</th>
+                            <th class="py-2 px-4">Categoria</th>
+                            <th class="py-2 px-4">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inscricoesTable" class="text-gray-700">
+                        <!-- Inscrições do cliente serão inseridas aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup de Confirmação -->
+    <div id="confirmPopup" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
+            <p id="confirmMessage" class="text-xl mb-6">Você tem certeza?</p>
+            <div class="flex justify-center space-x-4">
+                <button onclick="confirmAction()" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Sim</button>
+                <button onclick="closePopup()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalhes da Campanha -->
+    <div id="detalhesCampanhaModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
+            <h3 class="text-2xl font-semibold mb-4">Detalhes da Campanha</h3>
+            <div id="detalhesConteudo" class="space-y-2 text-left">
+                <!-- Detalhes da campanha serão exibidos aqui -->
+            </div>
+            <div class="flex justify-end mt-6">
+                <button onclick="closeDetalhesModal()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/scriptsCliente/campanhasCliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administração de Campanhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <div class="w-64 bg-white shadow-md">
+        <div class="p-4">
+          <img
+            src="../Imagens/Dashbords/Visao Geral/logo-2.png"
+            alt="Banese Card"
+            class="mb-6"
+          />
+          <nav>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center text-gray-600 hover:text-green-700"
+                  >Comunidade</a
+                >
+              </li>
+              <li>
+                <a
+                  href="cadastroCampanha.html"
+                  class="flex items-center text-gray-600 hover:text-green-700"
+                  >Add Campanhas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="campanhasAdm.html"
+                  class="flex items-center text-gray-600 hover:text-green-700"
+                  >Campanhas</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="flex-1 p-10">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Administração de Campanhas
+          </h2>
+          <table class="w-full text-left bg-white rounded-lg shadow-lg">
+            <thead>
+              <tr class="bg-green-500 text-white">
+                <th class="py-2 px-4">Nome da Campanha</th>
+                <th class="py-2 px-4">Tipo de Premiação</th>
+                <th class="py-2 px-4">Categoria</th>
+                <th class="py-2 px-4">Data de Início</th>
+                <th class="py-2 px-4">Data de Término</th>
+                <th class="py-2 px-4">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="campanhasTable" class="text-gray-700"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="campanhaFormModal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
+        <h3 class="text-2xl font-semibold mb-4">Editar Campanha</h3>
+        <form id="campanhaForm" class="space-y-4">
+          <input
+            type="text"
+            id="nomeCampanha"
+            placeholder="Nome da campanha"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <select id="tipoPremiacao" class="w-full px-4 py-2 border rounded">
+            <option>Tipo de premiação</option>
+          </select>
+          <select id="categoria" class="w-full px-4 py-2 border rounded">
+            <option>Categoria</option>
+          </select>
+          <input
+            type="date"
+            id="dataInicio"
+            placeholder="Data de início"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="date"
+            id="dataTermino"
+            placeholder="Data de término"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="limiteQuantitativo"
+            placeholder="Limite quantitativo"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <select id="mecanica" class="w-full px-4 py-2 border rounded">
+            <option>Mecânica</option>
+          </select>
+          <input
+            type="text"
+            id="informeExcessao"
+            placeholder="Informe de exceção"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="valorMinimo"
+            placeholder="Valor Mínimo"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="modoEntrada"
+            placeholder="Modo de entrada"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="mcc"
+            placeholder="MCC"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="cartoes"
+            placeholder="Cartões"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <input
+            type="text"
+            id="estabelecimento"
+            placeholder="Estabelecimento"
+            class="w-full px-4 py-2 border rounded"
+          />
+          <div class="flex justify-end space-x-4">
+            <button
+              type="button"
+              onclick="closeForm()"
+              class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              onclick="saveEditedCampanha()"
+              class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+            >
+              Salvar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../scripts/scriptsAdm/campanhasAdm.js"></script>
+  </body>
+</html>
