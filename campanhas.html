@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Campanhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-green-500 text-white p-4 rounded-b-3xl">
+        <nav class="container mx-auto flex justify-between items-center">
+          <img src="Imagens/Pagina Inicial/logowhite.png"Banese Card Logo"
+          class="h-8">
+          <div class="space-x-4">
+            <a
+              href="#"
+              onclick="location.href='index.html';"
+              class="hover:underline"
+              >Início</a
+            >
+            <a href="#" onclick="location.href='campanhas.html';" class="hover:underline">Campanhas</a>
+            <button
+              class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700"
+              onclick="location.href = 'login.html';"
+            >
+              ACESSAR
+            </button>
+          </div>
+        </nav>
+      </header>
+
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6">Campanhas Disponíveis</h1>
+        <table class="w-full text-left bg-white rounded-lg shadow-lg">
+            <thead>
+                <tr class="bg-green-500 text-white">
+                    <th class="py-2 px-4">Nome</th>
+                    <th class="py-2 px-4">Tipo de Premiação</th>
+                    <th class="py-2 px-4">Categoria</th>
+                </tr>
+            </thead>
+            <tbody id="campanhasTable" class="text-gray-700">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="detalhesCampanhaModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
+            <h3 class="text-2xl font-semibold mb-4">Detalhes da Campanha</h3>
+            <div id="detalhesConteudo" class="space-y-2 text-left">
+
+            </div>
+            <div class="flex justify-end mt-6">
+                <button onclick="closeDetalhesModal()" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/campanhas.js"></script>
+</body>
+</html>
