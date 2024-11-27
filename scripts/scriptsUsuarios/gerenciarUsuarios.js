@@ -1,6 +1,15 @@
 let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 let usuarioEditIndex = null;
 
+function formatarCPF(cpf) {
+    cpf = cpf.replace(/\D/g, '');
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+}
+
+function removerFormatacaoCPF(cpf) {
+    return cpf.replace(/\D/g, '');
+}
+
 function renderUsuarios() {
     const usuariosTable = document.getElementById('usuariosTable');
     usuariosTable.innerHTML = '';
@@ -8,7 +17,7 @@ function renderUsuarios() {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td class="border px-4 py-2">${usuario.nome}</td>
-            <td class="border px-4 py-2">${usuario.cpf}</td>
+            <td class="border px-4 py-2">${formatarCPF(usuario.cpf)}</td>
             <td class="border px-4 py-2">${usuario.email}</td>
             <td class="border px-4 py-2">${usuario.tipo}</td>
             <td class="border px-4 py-2 flex space-x-2">
@@ -24,7 +33,7 @@ function editarUsuario(index) {
     const usuario = usuarios[index];
     usuarioEditIndex = index;
     document.getElementById('nomeUsuario').value = usuario.nome;
-    document.getElementById('cpfUsuario').value = usuario.cpf;
+    document.getElementById('cpfUsuario').value = formatarCPF(usuario.cpf);
     document.getElementById('emailUsuario').value = usuario.email;
     document.getElementById('senhaUsuario').value = usuario.senha;
     document.getElementById('tipoUsuario').value = usuario.tipo;
@@ -33,7 +42,7 @@ function editarUsuario(index) {
 
 function salvarEdicaoUsuario() {
     const nome = document.getElementById('nomeUsuario').value;
-    const cpf = document.getElementById('cpfUsuario').value;
+    const cpf = removerFormatacaoCPF(document.getElementById('cpfUsuario').value); 
     const email = document.getElementById('emailUsuario').value;
     const senha = document.getElementById('senhaUsuario').value;
     const tipo = document.getElementById('tipoUsuario').value;
