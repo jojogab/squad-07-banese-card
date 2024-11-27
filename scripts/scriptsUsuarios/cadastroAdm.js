@@ -1,6 +1,14 @@
+function mascaraCPF(input) {
+    let value = input.value.replace(/\D/g, ''); 
+    value = value.replace(/(\d{3})(\d)/, '$1.$2'); 
+    value = value.replace(/(\d{3})(\d)/, '$1.$2'); 
+    value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
+    input.value = value;
+}
+
 function cadastrarAdm() {
     const nome = document.getElementById('nomeAdm').value;
-    const cpf = document.getElementById('cpfAdm').value;
+    const cpf = document.getElementById('cpfAdm').value.replace(/\D/g, ''); 
     const email = document.getElementById('emailAdm').value;
     const senha = document.getElementById('senhaAdm').value;
 

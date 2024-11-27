@@ -1,3 +1,11 @@
+function mascaraCPF(input) {
+    let value = input.value.replace(/\D/g, ''); 
+    value = value.replace(/(\d{3})(\d)/, '$1.$2'); 
+    value = value.replace(/(\d{3})(\d)/, '$1.$2'); 
+    value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
+    input.value = value;
+}
+
 function login() {
     const cpf = document.getElementById('loginCpf').value;
     const senha = document.getElementById('loginSenha').value;
