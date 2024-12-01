@@ -7,12 +7,16 @@ function mascaraCPF(input) {
 }
 
 function login() {
-    const cpf = document.getElementById('loginCpf').value;
-    const senha = document.getElementById('loginSenha').value;
+    const cpfInput = document.getElementById('loginCpf').value.replace(/\D/g, '').trim();
+    const senhaInput = document.getElementById('loginSenha').value.trim();
+
+    if (!cpfInput || !senhaInput) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    const usuarioEncontrado = usuarios.find(usuario => usuario.cpf === cpf && usuario.senha === senha);
+    const usuarioEncontrado = usuarios.find(usuario => usuario.cpf === cpfInput && usuario.senha === senhaInput);
 
     if (usuarioEncontrado) {
         if (usuarioEncontrado.tipo === 'adm') {
