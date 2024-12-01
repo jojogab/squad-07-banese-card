@@ -28,7 +28,14 @@ function renderCampanhas() {
 }
 
 function editCampanha(index) {
+    currentEditIndex = index;
     const campanha = campanhas[index];
+
+    if (!campanha) {
+        console.error("Campanha não encontrada.");
+        return;
+    }
+
     document.getElementById('nomeCampanha').value = campanha.nomeCampanha;
     document.getElementById('tipoPremiacao').value = campanha.tipoPremiacao;
     document.getElementById('categoria').value = campanha.categoria;
@@ -36,14 +43,16 @@ function editCampanha(index) {
     document.getElementById('dataTermino').value = campanha.dataTermino;
     document.getElementById('limiteQuantitativo').value = campanha.limiteQuantitativo;
     document.getElementById('mecanica').value = campanha.mecanica;
-    document.getElementById('informeExcessao').value = campanha.informeExcessao;
+    document.getElementById('descricao').value = campanha.informeExcessao.descricao;
     document.getElementById('valorMinimo').value = campanha.valorMinimo;
     document.getElementById('modoEntrada').value = campanha.modoEntrada;
     document.getElementById('mcc').value = campanha.mcc;
     document.getElementById('cartoes').value = campanha.cartoes;
     document.getElementById('estabelecimento').value = campanha.estabelecimento;
 
-    currentEditIndex = index; 
+    document.getElementById('blacklist').checked = campanha.informeExcessao.blacklist;
+    document.getElementById('whitelist').checked = campanha.informeExcessao.whitelist;
+
     document.getElementById('campanhaFormModal').classList.remove('hidden');
 }
 
@@ -57,7 +66,11 @@ function saveEditedCampanha() {
     campanhas[currentEditIndex].dataTermino = document.getElementById('dataTermino').value;
     campanhas[currentEditIndex].limiteQuantitativo = document.getElementById('limiteQuantitativo').value;
     campanhas[currentEditIndex].mecanica = document.getElementById('mecanica').value;
-    campanhas[currentEditIndex].informeExcessao = document.getElementById('informeExcessao').value;
+    campanhas[currentEditIndex].informeExcessao = {
+        blacklist: document.getElementById('blacklist').checked,
+        whitelist: document.getElementById('whitelist').checked,
+        descricao: document.getElementById('descricao').value
+    };
     campanhas[currentEditIndex].valorMinimo = document.getElementById('valorMinimo').value;
     campanhas[currentEditIndex].modoEntrada = document.getElementById('modoEntrada').value;
     campanhas[currentEditIndex].mcc = document.getElementById('mcc').value;

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const dataTermino = document.querySelector("input[placeholder='Data de término']").value;
       const limiteQuantitativo = document.querySelector("input[placeholder='Limite quantitativo']").value;
       const mecanica = document.querySelectorAll("select")[2].value;
-      const informeExcessao = document.querySelector("input[placeholder='Iforme de excessão']").value;
+      const descricao = document.querySelector("input[placeholder='Descrição']").value;
       const valorMinimo = document.querySelector("input[placeholder='Valor Mínimo']").value;
       const modoEntrada = document.querySelector("input[placeholder='Modo de entrada:']").value;
       const mcc = document.querySelector("input[placeholder='MCC']").value;
@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
           dataTermino,
           limiteQuantitativo,
           mecanica,
-          informeExcessao,
+          informeExcessao: {
+              blacklist: document.getElementById('blacklist').checked,
+              whitelist: document.getElementById('whitelist').checked,
+              descricao
+          },
           valorMinimo,
           modoEntrada,
           mcc,
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("input[placeholder='Data de término']").value = '';
       document.querySelector("input[placeholder='Limite quantitativo']").value = '';
       document.querySelectorAll("select")[2].value = '';
-      document.querySelector("input[placeholder='Iforme de excessão']").value = '';
+      document.querySelector("input[placeholder='Descrição']").value = '';
       document.querySelector("input[placeholder='Valor Mínimo']").value = '';
       document.querySelector("input[placeholder='Modo de entrada:']").value = '';
       document.querySelector("input[placeholder='MCC']").value = '';
